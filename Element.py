@@ -13,7 +13,7 @@ html_content = '''
     </body>
 '''
 
-element_format = '<{0} id="{1}" style="position: absolute; top: {2}px; left: {3}px;background: red; margin:0;width:{4}px;height:{5}px;font-size:{5}px;outline:{6}px solid white;">Hello</{0}>\n'
+element_format = '<{0} id="{1}" style="position: absolute; top: {2}px; left: {3}px;background: red; margin:0;width:{4}px;height:{5}px;font-size:{5}px;outline:{6}px solid black;">Hello</{0}>\n'
 
 
 class Element:
