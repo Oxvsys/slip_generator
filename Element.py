@@ -13,7 +13,7 @@ html_content = '''
     </body>
 '''
 
-element_format = '<{0} id="{1}" style="position: absolute; top: {2}px; left: {3}px;background: red; margin:0;width:{4}px;height:{5}px;font-size:{5}px">Hello</{0}>\n'
+element_format = '<{0} id="{1}" style="position: absolute; top: {2}px; left: {3}px;background: red; margin:0;width:{4}px;height:{5}px;font-size:{5}px;outline:{6}px solid white;">Hello</{0}>\n'
 
 
 class Element:
@@ -28,4 +28,5 @@ class Element:
     def __str__(self):
         width = self.coordinates['x2'] - self.coordinates['x1']
         height = self.coordinates['y2'] - self.coordinates['y1']
-        return element_format.format(self.tag, self.id, self.coordinates['y1'], self.coordinates['x1'], width, height)
+        border = 1 if self.coordinates['border'] else 0
+        return element_format.format(self.tag, self.id, self.coordinates['y1'], self.coordinates['x1'], width, height,border)
